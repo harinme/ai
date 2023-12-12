@@ -5,10 +5,10 @@ public class SnowTireExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 SnowTire snowTire = new SnowTire();
-   Tire tire = snowTire;
+   Tire tire = (Tire) snowTire;
 
    snowTire.run();
-tire.run();
+   tire.run(); //다형성 문제
 	}
 
 }
