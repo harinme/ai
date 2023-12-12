@@ -64,7 +64,7 @@ print(b)
 
 s="안녕하세요. 반갑습니다."
 print(s[0])
-print(s[3:10]) # 숫자:숫자 3< index number < 10에서 index numberf를 출력해줌. 3 이후부터 10 이전까지 보여줘
+print(s[3:10]) # 숫자:숫자 3< index number < 10에서 index numberf를 출력해줌. 3 이상 10 이전까지 보여줘
 print(s[:6])
 
 print(s[6:])
