@@ -41,4 +41,4 @@ elif 4 <= int(month) <=6:
 elif 7 <= int(month) <=9:
   print("3사분기")
 elif 10 <= int(month) <=12:
-  print("3사분기")
+  print("4사분기")
