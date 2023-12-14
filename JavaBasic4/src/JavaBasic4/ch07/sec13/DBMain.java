@@ -4,18 +4,18 @@ public class DBMain {
 
 	public static void main(String[] args) {
 
-	Connect myConnect = new Connect();
-		// TODO Auto-generated method stub
-//¿À¶óÅ¬
-		myConnect.db = new Oracle();
-		myConnect.dbRun();
-		
-		//MySql
-		myConnect.db = new MySql();
-		myConnect.dbRun();
-		//¸ù°í
-	//	myConnect.db = new MongoDB();
-		//myConnect.dbRun();
+//	Connect myConnect = new Connect();
+//		// TODO Auto-generated method stub
+////¿À¶óÅ¬
+//		myConnect.db = new Oracle();
+//		myConnect.dbRun();
+//		
+//		//MySql
+//		myConnect.db = new MySql();
+//		myConnect.dbRun();
+//		//¸ù°í
+//	//	myConnect.db = new MongoDB();
+//		//myConnect.dbRun();
 		
 	}
 
