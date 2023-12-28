@@ -1,116 +1,116 @@
-# r=0 # 전역변수
-# def printSum(sList):
-#     # r=0 #  지역변수
-#     global r # 전역변수 r 이라는 뜻
-#     r=0
-#     for s in sList:
-#         r+=s
-#     return r
+'''r=0 # 전역변수
+def printSum(sList):
+    # r=0 #  지역변수
+    global r # 전역변수 r 이라는 뜻
+    r=0
+    for s in sList:
+        r+=s
+    return r
 
-# sList=[1,3,5,6,2]
-# print(printSum(sList))
-# print(r)
+sList=[1,3,5,6,2]
+print(printSum(sList))
+print(r)
 
-# #288 연습문제
-# #7-1
-# def func():
-#     x=200
+#288 연습문제
+#7-1
+def func():
+    x=200
 
-# func()
-# # print(x) x가 지역 함수이기 때문에 
+func()
+# print(x) x가 지역 함수이기 때문에 
 
-# #7-2
-# def func():
-#     x=200
-#     print(x)
+#7-2
+def func():
+    x=200
+    print(x)
 
-# x=100
-# func()
-# print(x)
+x=100
+func()
+print(x)
 
-# #7-3
-# def finc():
-#     global x
-#     x=200
-#     print(x)
+#7-3
+def finc():
+    global x
+    x=200
+    print(x)
 
-# x=100
-# func()
-# print(x)
+x=100
+func()
+print(x)
 
-#7-4
-# def km(x):
-#     mile=x*0.621371
-#     return mile
+7-4
+def km(x):
+    mile=x*0.621371
+    return mile
 
-# x=int(input("킬로미터를 입력하세요"))
-# print("%d 킬로미터는 %.2f 마일이다."%(x,km(x)))
+x=int(input("킬로미터를 입력하세요"))
+print("%d 킬로미터는 %.2f 마일이다."%(x,km(x)))
 
-#7-5
+7-5
 
-# print("-선택 옵션", "1. 더하기" , "2. 빼기", "3. 곱하기","4. 나누기")
-# c=int(input("원하는 연산을 선택하세요(1/2/3/4)"))
-# x=int(input("첫번째 숫자를 입력하세요: "))
-# y=int(input("두번째 숫자를 입력하세요: "))
-# def func(x,y):
-#     if c== 1:
-#         m=x+y
-#         print(f"{x}+{y}={m}")
-#     elif c==2:
-#         m=x-y
-#         print(f"{x}-{y}={m}")
-#     elif c==3:
-#         m=x*y
-#         print(f"{x}x{y}={m}")
-#     else :
-#         m=x/y
-#         print(f"{x}÷{y}={m}")
+print("-선택 옵션", "1. 더하기" , "2. 빼기", "3. 곱하기","4. 나누기")
+c=int(input("원하는 연산을 선택하세요(1/2/3/4)"))
+x=int(input("첫번째 숫자를 입력하세요: "))
+y=int(input("두번째 숫자를 입력하세요: "))
+def func(x,y):
+    if c== 1:
+        m=x+y
+        print(f"{x}+{y}={m}")
+    elif c==2:
+        m=x-y
+        print(f"{x}-{y}={m}")
+    elif c==3:
+        m=x*y
+        print(f"{x}x{y}={m}")
+    else :
+        m=x/y
+        print(f"{x}÷{y}={m}")
 
 
-# func(x,y)
+func(x,y)
 
-# 7-6
+7-6
 
-# def func2(english,al):
-#     count=0
-#     for i in english:
-#         if i==al:
-#             count = count+1
+def func2(english,al):
+    count=0
+    for i in english:
+        if i==al:
+            count = count+1
     
-#     return count
+    return count
 
-# english=input("영어 문장을 입력하세요: ")
-# al=input("알파벳 하나를 입력하세요: ")
-# k= func2(english,al)
-# print(f"{english}에 포함된 {al}의 개수는 {k}개 이다.")
+english=input("영어 문장을 입력하세요: ")
+al=input("알파벳 하나를 입력하세요: ")
+k= func2(english,al)
+print(f"{english}에 포함된 {al}의 개수는 {k}개 이다.")
 
-# #7-7
+#7-7
 
-# def func3(x):
-#     sum=0
-#     for i in x:
-#         sum=sum+i
-#     return sum
-# tup1=(10,20,30,40,50)
-# sm=func3(tup1)
-# print(f"튜플의 합계 : {sm}")
+def func3(x):
+    sum=0
+    for i in x:
+        sum=sum+i
+    return sum
+tup1=(10,20,30,40,50)
+sm=func3(tup1)
+print(f"튜플의 합계 : {sm}")
 
-# #7-8
-# def func6(st):
-#     for i in range(len(st)-1,-1,-1):
-#         print(st[i],end="")
+#7-8
+def func6(st):
+    for i in range(len(st)-1,-1,-1):
+        print(st[i],end="")
 
-# str=input("문자열을 입력하세요.")
-# func6(str)    
-# print()
+str=input("문자열을 입력하세요.")
+func6(str)    
+print()
 
-# #7-9
-# def func7(st):
-#     st1=st.replace(" ","-")
-#     return st1 
+#7-9
+def func7(st):
+    st1=st.replace(" ","-")
+    return st1 
 
-# string=input("문자열을 입력하세요: ")
-# print(func7(string))
+string=input("문자열을 입력하세요: ")
+print(func7(string))
 
 #7-10
 def inchF(x):
@@ -131,3 +131,39 @@ if option==1:
 else :
     q=int(input("킬로그램 단위의 무게를 입력하세요: "))
     print("%d 킬로그램 --> %.2f 파운드"%(q,poundF(q)))
+'''
+
+# 심화문제 7-1
+n = int(input("n값을 입력해 주세요")) #50
+
+def decimalFun( n1 ) :
+    dL = []
+    for i in range( 2, n1, 1) : # 2 3 4
+        x = True
+        for j in range( 2, i,1) : #1, 2 , 2 3 4, 2 3 4 5
+            if i % j == 0   : # 2%2 ==0
+                x = False
+                break
+        if x :
+            # print(i)
+            dL.append(i)
+    return dL        
+
+dL=decimalFun( n )
+print(dL, end="")
+
+# 심화문제 7-2
+eng_dict = {"house":"집","piano":"피아노","christmas":"크리스마스",}
+
+# 심화문제 7-3
+
+n= int (input("n의 값을 입력하세요: "))
+
+def nMul(n) :
+    result = [ ]
+    for i in range(1,n+1):
+        result.append(i*i)
+    return result
+
+resultList=nMul(n)
+print(resultList)
