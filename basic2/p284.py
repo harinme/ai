@@ -131,7 +131,7 @@ if option==1:
 else :
     q=int(input("킬로그램 단위의 무게를 입력하세요: "))
     print("%d 킬로그램 --> %.2f 파운드"%(q,poundF(q)))
-'''
+
 
 # 심화문제 7-1
 n = int(input("n값을 입력해 주세요")) #50
@@ -154,14 +154,14 @@ print(dL, end="")
 
 # 심화문제 7-2
 eng_dict = {"house":"집","piano":"피아노","christmas":"크리스마스",}
-
+'''
 # 심화문제 7-3
 
 n= int (input("n의 값을 입력하세요: "))
 
 def nMul(n) :
     result = [ ]
-    for i in range(1,n+1):
+    for i in range(1,n+1): #1~10
         result.append(i*i)
     return result
 
