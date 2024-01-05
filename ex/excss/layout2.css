@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #aaef78;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto; /* 가운데 정렬*/
+}
+#header {
+  width: 1200px;
+  height: 100px;
+  background-color: #5fcc41;
+}
+
+#nav1 {
+  width: 600px;
+  height: 100px;
+  background-color: #2fd5e4;
+  float: left;
+}
+#nav2 {
+  width: 600px;
+  height: 100px;
+  background-color: #10fab4;
+  float: left;
+}
+#a {
+  clear: both;
+}
+#aside1 {
+  width: 300px;
+  height: 800px;
+  background-color: #0ca960;
+  float: left;
+}
+
+#section {
+  width: 600px;
+  height: 800px;
+  background-color: #12767d;
+  float: left;
+}
+#aside2 {
+  width: 300px;
+  height: 800px;
+  background-color: #f0e910;
+  float: left;
+}
+#footer {
+  /*바로 위에 float: left;가 있으면 아래에 있는 거 높이랑 색 지정이 안됨. */
+  width: 1200px;
+  height: 80px;
+  background-color: #9d7de6;
+  /*바로 위에 section에 float: left;가 있어서 바로 아래에 위치한 footer의 높이랑 색 지정이 안됨. */
+  /*그래서 clear: both;를 써줌-> 위에와 연결을 끊음*/
+  clear: both;
+}
