@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+}
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header header header header" "nav1 nav2 nav3 nav3" "aside aside section section" "footer1 footer2 footer3 footer4";
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows: 100px 100px 780px 100px;
+}
+#header {
+  background-color: rgba(255, 255, 255, 0.999);
+  grid-area: header;
+}
+#nav1 {
+  background-color: rgb(183, 255, 248);
+  grid-area: nav1;
+}
+#nav2 {
+  background-color: rgb(89, 255, 225);
+  grid-area: nav2;
+}
+#nav3 {
+  background-color: rgb(0, 255, 242);
+  grid-area: nav3;
+}
+#aside {
+  background-color: rgba(213, 255, 176, 0.874);
+  grid-area: aside;
+}
+#section {
+  background-color: rgba(65, 255, 113, 0.874);
+  grid-area: section;
+}
+#footer1 {
+  background-color: rgb(182, 193, 255);
+  grid-area: footer1;
+}
+#footer2 {
+  background-color: rgb(138, 156, 255);
+  grid-area: footer2;
+}
+#footer3 {
+  background-color: rgb(66, 94, 255);
+  grid-area: footer3;
+}
+#footer4 {
+  background-color: rgb(19, 55, 255);
+  grid-area: footer4;
+}
