@@ -1,42 +1,101 @@
-*{
-    font-family: 'Diphylleia', serif;
+* {
+  font-family: "Diphylleia", serif;
 }
-html{
-    background-size: cover;
+html {
+  background-size: cover;
 }
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
-#header{ /* id는 #*/
-    z-index: 1;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8);
-    height: 40px;
-    width: 100%;
-    box-shadow: 0 0.6px rgb(155, 155, 155);
-    position: fixed;
-    top: -1px; /* 위치속성: 고정하기*/
+#header {
+  /* id는 #*/
+  z-index: 1;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 40px;
+  width: 100%;
+  box-shadow: 0 0.6px rgb(155, 155, 155);
+  position: fixed;
+  top: -1px; /* 위치속성: 고정하기*/
 }
-.mainBar{ /* class는 . */
-    margin: 0 auto;
-    width: 1200px;
+.mainBar {
+  /* class는 . */
+  margin: 0 auto;
+  width: 1200px;
 }
-.leftMainBar div{
-    float:left;
-    padding: 9px 10px;
-}
-
-.leftMainBar div a{
-    text-decoration: none; /*밑줄 */
-    font-size: small;
-    color: black;
+.leftMainBar div {
+  float: left;
+  padding: 9px 10px;
 }
 
-.leftMainBar div a:hover{
-    opacity: 50;
+.leftMainBar div a {
+  text-decoration: none; /*밑줄 */
+  font-size: small;
+  color: black;
 }
 
-.rightMainBar div{
-    float: right;
-    padding: 9px 10px;
+.leftMainBar div a:hover {
+  opacity: 50;
+}
+
+.rightMainBar div {
+  float: right;
+  padding: 9px 10px;
+}
+header {
+  position: relative;
+  border-top: 15px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+header h1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 0 0 0 26px;
+}
+
+header h1 a {
+  display: block;
+  width: 100px;
+  height: 70px;
+  background: url(../image/logo.png) no-repeat center;
+}
+.hide {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  border: 0;
+  width: 1px;
+}
+#a {
+  text-decoration: none;
+}
+header nav ul {
+  text-align: center;
+  font-size: 0px;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  display: block;
+  padding: 15px 30px 15px 35px;
+  line-height: 69px;
+  font-size: 13px;
+  color: #000;
+}
+header .util {
+  position: absolute;
+  right: 0px;
+  top: 39px;
+}
+header .util a {
+  display: inline-block;
+  font-size: 10px;
+  color: rgb(0, 6, 54);
+}
+header .util button {
+  width: 25px;
+  height: 25px;
+  background: url(../image/search.png) no-repeat;
 }
