@@ -251,3 +251,21 @@ a.new[4]
 levels(a.new)
 #(5) 팩터 f의 문자값을 숫자로 바꾸어 출력하시오.
 as.integer(a.new)
+
+a <- 4
+b <- 5
+c <- a+b
+c
+
+
+y <- 2*2+5*x+10
+x <- 6 # 44
+y
+x <- 8 # 54
+x <- 10 #64
+
+
+val.a <- 10
+val.b <- 20
+sum.ab <- val.a +val.b
+sum.ab
