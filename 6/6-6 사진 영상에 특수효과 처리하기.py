@@ -1,5 +1,4 @@
-# 6-6 사진 영상에 특수효과 처리하기
-
+# 6-6 사진영상에 특수효과 처리하기
 import cv2 as cv
 import numpy as np
 from PyQt5.QtWidgets import *
@@ -43,9 +42,9 @@ class SpecialEffect(QMainWindow):
     def pictureOpenFunction(self):
         fname=QFileDialog.getOpenFileName(self,'사진 읽기','./')
         self.img=cv.imread(fname[0])    
-        if self.img is None: sys.exit('파일을 찾을 수 없습니다.')
-        cv.imshow('Painting',self.img)
-        
+        if self.img is None: sys.exit('파일을 찾을 수 없습니다.')     
+        cv.imshow('Painting',self.img)  
+
     def embossFunction(self):
         femboss=np.array([[-1.0, 0.0, 0.0],[0.0, 0.0, 0.0],[0.0, 0.0, 1.0]])
         
@@ -53,16 +52,17 @@ class SpecialEffect(QMainWindow):
         gray16=np.int16(gray)
         self.emboss=np.uint8(np.clip(cv.filter2D(gray16,-1,femboss)+128,0,255))
         
-        cv.imshow('Emboss',self.emboss)
+        cv.imshow('Emboss',self.emboss)    
         
     def cartoonFunction(self):
         self.cartoon=cv.stylization(self.img,sigma_s=60,sigma_r=0.45)
-        cv.imshow('Cartoon',self.cartoon)
+        cv.imshow('Cartoon',self.cartoon)     
         
     def sketchFunction(self):
         self.sketch_gray,self.sketch_color=cv.pencilSketch(self.img,sigma_s=60,sigma_r=0.07,shade_factor=0.02)
         cv.imshow('Pencil sketch(gray)',self.sketch_gray)
-        cv.imshow('Pencil sketch(color)',self.sketch_color)
+        cv.imshow('Pencil sketch(color)',self.sketch_color)   
+        
     def oilFunction(self):
         self.oil=cv.xphoto.oilPainting(self.img,10,1,cv.COLOR_BGR2Lab)
         cv.imshow('Oil painting',self.oil) 
@@ -71,17 +71,19 @@ class SpecialEffect(QMainWindow):
         fname=QFileDialog.getSaveFileName(self,'파일 저장','./')
         
         i=self.pickCombo.currentIndex()
-        if i==0: cv.imwrite(fname[0],self.emboss)
+        print( "i==>", i )
+        if i==0: cv.imwrite(fname[0],self.emboss) # ?? 저장 안됨
         elif i==1: cv.imwrite(fname[0],self.cartoon)
         elif i==2: cv.imwrite(fname[0],self.sketch_gray)
         elif i==3: cv.imwrite(fname[0],self.sketch_color)
         elif i==4: cv.imwrite(fname[0],self.oil)
-                        
+        
+                
     def quitFunction(self):
         cv.destroyAllWindows()        
-        self.close()
+        self.close()    
         
-app=QApplication(sys.argv)
-win=SpecialEffect()
+app=QApplication(sys.argv) 
+win=SpecialEffect() 
 win.show()
 app.exec_()
